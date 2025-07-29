@@ -8,35 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Nature-inspired luxury camping color palette */
+    --background: 45 25% 97%; /* Warm cream white */
+    --foreground: 120 30% 15%; /* Deep forest green for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 45 25% 98%; /* Slightly warmer card background */
+    --card-foreground: 120 30% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 45 25% 98%;
+    --popover-foreground: 120 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 40% 35%; /* Sage green primary */
+    --primary-foreground: 45 25% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 20% 88%; /* Sand beige */
+    --secondary-foreground: 120 30% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 15% 92%; /* Light sand */
+    --muted-foreground: 120 15% 45%; /* Muted forest */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 25 40% 65%; /* Warm brown accent */
+    --accent-foreground: 45 25% 97%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 45 25% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 15% 85%; /* Soft beige border */
+    --input: 45 15% 90%;
+    --ring: 120 40% 35%;
 
-    --radius: 0.5rem;
+    /* Luxury gold accent */
+    --gold: 45 80% 70%;
+    --gold-foreground: 25 30% 15%;
+
+    /* Nature gradients */
+    --gradient-nature: linear-gradient(135deg, hsl(120 40% 35%), hsl(120 50% 45%));
+    --gradient-earth: linear-gradient(135deg, hsl(25 40% 65%), hsl(45 30% 75%));
+    --gradient-luxury: linear-gradient(135deg, hsl(45 80% 70%), hsl(45 70% 80%));
+    
+    /* Shadows with natural tones */
+    --shadow-nature: 0 10px 30px -10px hsl(120 40% 35% / 0.2);
+    --shadow-luxury: 0 20px 40px -15px hsl(25 30% 40% / 0.15);
+    
+    /* Smooth transitions */
+    --transition-nature: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +117,53 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Nature-inspired button variants */
+  .btn-nature {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground 
+           hover:shadow-[var(--shadow-nature)] transition-[var(--transition-nature)]
+           px-6 py-3 rounded-[var(--radius)] font-medium;
+  }
+  
+  .btn-luxury {
+    @apply bg-gradient-to-r from-accent to-accent/90 text-accent-foreground 
+           hover:shadow-[var(--shadow-luxury)] transition-[var(--transition-nature)]
+           px-6 py-3 rounded-[var(--radius)] font-medium;
+  }
+  
+  .btn-gold {
+    @apply bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))]
+           hover:bg-[hsl(var(--gold))]/90 transition-[var(--transition-nature)]
+           px-6 py-3 rounded-[var(--radius)] font-medium;
+  }
+  
+  /* Text animations */
+  .text-fade-in {
+    @apply animate-in fade-in-0 slide-in-from-bottom-4 duration-700;
+  }
+  
+  /* Parallax and scroll effects */
+  .parallax {
+    @apply bg-fixed bg-center bg-cover;
+  }
+  
+  /* Nature textures */
+  .texture-organic {
+    background-image: radial-gradient(circle at 2px 2px, hsl(var(--muted)) 1px, transparent 0);
+    background-size: 20px 20px;
   }
 }

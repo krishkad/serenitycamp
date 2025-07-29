@@ -56,9 +56,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				gold: {
-					DEFAULT: 'hsl(var(--gold))',
-					foreground: 'hsl(var(--gold-foreground))'
+				'campfire-gold': {
+					DEFAULT: 'hsl(var(--campfire-gold))',
+					foreground: 'hsl(var(--campfire-gold-foreground))'
+				},
+				'sky-blue': {
+					DEFAULT: 'hsl(var(--sky-blue))',
+					foreground: 'hsl(var(--sky-blue-foreground))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -72,9 +76,15 @@ export default {
 				}
 			},
 			backgroundImage: {
-				'gradient-nature': 'var(--gradient-nature)',
-				'gradient-earth': 'var(--gradient-earth)', 
-				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-forest': 'var(--gradient-forest)',
+				'gradient-sunrise': 'var(--gradient-sunrise)', 
+				'gradient-dusk': 'var(--gradient-dusk)',
+				'gradient-mist': 'var(--gradient-mist)',
+			},
+			animation: {
+				'float': 'float 6s ease-in-out infinite',
+				'float-leaves': 'float-leaves 20s linear infinite',
+				'shimmer': 'shimmer 2s infinite',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

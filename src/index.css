@@ -8,52 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Nature-inspired luxury camping color palette */
-    --background: 45 25% 97%; /* Warm cream white */
-    --foreground: 120 30% 15%; /* Deep forest green for text */
+    /* Immersive luxury nature color palette */
+    --background: 40 15% 95%; /* Misty Beige base */
+    --foreground: 160 30% 18%; /* Deep Forest Green for text */
 
-    --card: 45 25% 98%; /* Slightly warmer card background */
-    --card-foreground: 120 30% 15%;
+    --card: 40 20% 97%; /* Slightly warmer card background */
+    --card-foreground: 160 30% 18%;
 
-    --popover: 45 25% 98%;
-    --popover-foreground: 120 30% 15%;
+    --popover: 40 20% 97%;
+    --popover-foreground: 160 30% 18%;
 
-    --primary: 120 40% 35%; /* Sage green primary */
-    --primary-foreground: 45 25% 97%;
+    --primary: 160 45% 25%; /* Deep Forest Green */
+    --primary-foreground: 40 15% 95%;
 
-    --secondary: 45 20% 88%; /* Sand beige */
-    --secondary-foreground: 120 30% 15%;
+    --secondary: 40 20% 90%; /* Soft Beige */
+    --secondary-foreground: 160 30% 18%;
 
-    --muted: 45 15% 92%; /* Light sand */
-    --muted-foreground: 120 15% 45%; /* Muted forest */
+    --muted: 40 15% 88%; /* Light Misty Beige */
+    --muted-foreground: 160 15% 45%; /* Muted Forest */
 
-    --accent: 25 40% 65%; /* Warm brown accent */
-    --accent-foreground: 45 25% 97%;
+    --accent: 190 40% 75%; /* Sky Blue accent */
+    --accent-foreground: 160 30% 18%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 45 25% 97%;
+    --destructive-foreground: 40 15% 95%;
 
-    --border: 45 15% 85%; /* Soft beige border */
-    --input: 45 15% 90%;
-    --ring: 120 40% 35%;
+    --border: 40 15% 85%; /* Soft beige border */
+    --input: 40 15% 88%;
+    --ring: 160 45% 25%;
 
-    /* Luxury gold accent */
-    --gold: 45 80% 70%;
-    --gold-foreground: 25 30% 15%;
+    /* Luxury nature-specific colors */
+    --campfire-gold: 45 85% 55%; /* Campfire Gold */
+    --campfire-gold-foreground: 160 30% 18%;
+    --sky-blue: 190 40% 75%; /* Sky Blue */
+    --sky-blue-foreground: 160 30% 18%;
 
-    /* Nature gradients */
-    --gradient-nature: linear-gradient(135deg, hsl(120 40% 35%), hsl(120 50% 45%));
-    --gradient-earth: linear-gradient(135deg, hsl(25 40% 65%), hsl(45 30% 75%));
-    --gradient-luxury: linear-gradient(135deg, hsl(45 80% 70%), hsl(45 70% 80%));
+    /* Advanced gradients for immersive experience */
+    --gradient-sunrise: linear-gradient(135deg, hsl(25 75% 60%), hsl(35 85% 70%), hsl(45 85% 55%));
+    --gradient-dusk: linear-gradient(135deg, hsl(250 50% 35%), hsl(280 40% 45%), hsl(20 70% 55%));
+    --gradient-forest: linear-gradient(135deg, hsl(160 45% 25%), hsl(140 40% 35%));
+    --gradient-mist: linear-gradient(135deg, hsl(40 20% 90%), hsl(40 15% 95%));
     
-    /* Shadows with natural tones */
-    --shadow-nature: 0 10px 30px -10px hsl(120 40% 35% / 0.2);
-    --shadow-luxury: 0 20px 40px -15px hsl(25 30% 40% / 0.15);
+    /* Nature-inspired shadows */
+    --shadow-forest: 0 20px 40px -15px hsl(160 45% 25% / 0.3);
+    --shadow-gold: 0 15px 35px -10px hsl(45 85% 55% / 0.25);
+    --shadow-immersive: 0 25px 50px -20px hsl(160 30% 20% / 0.4);
     
-    /* Smooth transitions */
-    --transition-nature: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth nature transitions */
+    --transition-nature: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -132,38 +137,119 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Nature-inspired button variants */
+  /* Enhanced immersive button variants */
   .btn-nature {
-    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground 
-           hover:shadow-[var(--shadow-nature)] transition-[var(--transition-nature)]
-           px-6 py-3 rounded-[var(--radius)] font-medium;
-  }
-  
-  .btn-luxury {
-    @apply bg-gradient-to-r from-accent to-accent/90 text-accent-foreground 
-           hover:shadow-[var(--shadow-luxury)] transition-[var(--transition-nature)]
-           px-6 py-3 rounded-[var(--radius)] font-medium;
+    @apply bg-gradient-forest text-primary-foreground 
+           hover:shadow-[var(--shadow-forest)] transition-[var(--transition-nature)]
+           px-8 py-4 rounded-[var(--radius)] font-medium
+           hover:scale-105 active:scale-95;
   }
   
   .btn-gold {
-    @apply bg-[hsl(var(--gold))] text-[hsl(var(--gold-foreground))]
-           hover:bg-[hsl(var(--gold))]/90 transition-[var(--transition-nature)]
-           px-6 py-3 rounded-[var(--radius)] font-medium;
+    @apply bg-[hsl(var(--campfire-gold))] text-[hsl(var(--campfire-gold-foreground))]
+           hover:shadow-[var(--shadow-gold)] transition-[var(--transition-nature)]
+           px-8 py-4 rounded-[var(--radius)] font-medium
+           hover:scale-105 active:scale-95;
   }
   
-  /* Text animations */
-  .text-fade-in {
-    @apply animate-in fade-in-0 slide-in-from-bottom-4 duration-700;
+  .btn-sky {
+    @apply bg-[hsl(var(--sky-blue))] text-[hsl(var(--sky-blue-foreground))]
+           hover:shadow-[var(--shadow-immersive)] transition-[var(--transition-nature)]
+           px-8 py-4 rounded-[var(--radius)] font-medium
+           hover:scale-105 active:scale-95;
   }
   
-  /* Parallax and scroll effects */
-  .parallax {
-    @apply bg-fixed bg-center bg-cover;
+  /* Advanced text animations */
+  .text-reveal {
+    @apply animate-in fade-in-0 slide-in-from-bottom-8 duration-1000;
   }
   
-  /* Nature textures */
-  .texture-organic {
-    background-image: radial-gradient(circle at 2px 2px, hsl(var(--muted)) 1px, transparent 0);
+  .text-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Parallax and immersive effects */
+  .parallax-hero {
+    @apply bg-fixed bg-center bg-cover relative;
+    background-size: 110%;
+    will-change: transform;
+  }
+  
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+  
+  .nature-grain {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
     background-size: 20px 20px;
   }
+  
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-[var(--transition-nature)] hover:-translate-y-2 hover:shadow-[var(--shadow-immersive)];
+  }
+  
+  .hover-glow {
+    @apply transition-[var(--transition-gentle)] hover:shadow-[var(--shadow-gold)];
+  }
+  
+  /* Scroll progress bar */
+  .scroll-progress {
+    @apply fixed top-0 left-0 h-1 bg-gradient-to-r from-primary via-[hsl(var(--campfire-gold))] to-accent z-50;
+    transform-origin: 0%;
+  }
+  
+  /* Custom cursor effects */
+  .cursor-nature {
+    cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23204529' opacity='0.3'/%3E%3C/svg%3E") 12 12, auto;
+  }
+  
+  /* Floating elements */
+  .floating-leaves {
+    position: absolute;
+    pointer-events: none;
+    animation: float-leaves 20s linear infinite;
+  }
+  
+  /* Gradient overlays for immersion */
+  .overlay-sunrise {
+    background: var(--gradient-sunrise);
+    opacity: 0.1;
+  }
+  
+  .overlay-dusk {
+    background: var(--gradient-dusk);
+    opacity: 0.15;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+  }
+  
+  @keyframes float-leaves {
+    0% { transform: translateY(-100vh) translateX(-50px) rotate(0deg); }
+    100% { transform: translateY(100vh) translateX(50px) rotate(360deg); }
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
+
+/* Smooth scroll snap for sections */
+.scroll-snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }

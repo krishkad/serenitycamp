@@ -180,7 +180,7 @@ const Navbar = () => {
                   </div>
 
                   {/* Mobile CTA */}
-                  <div className="mt-6 p-6 bg-gradient-forest rounded-2xl text-center">
+                  {/* <div className="mt-6 p-6 bg-gradient-forest rounded-2xl text-center">
                     <h4 className="text-white font-semibold mb-2">
                       Ready for Adventure?
                     </h4>
@@ -190,7 +190,7 @@ const Navbar = () => {
                     <Button className="btn-gold w-full">
                       Start Your Journey
                     </Button>
-                  </div>
+                  </div> */}
                 </SheetContent>
               </Sheet>
             </div>

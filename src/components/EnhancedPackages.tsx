@@ -14,8 +14,8 @@ const packages = [
     title: "Couple Retreat",
     subtitle: "Romance Under Stars",
     description: "Intimate luxury for two souls seeking connection",
-    price: "From $299/night",
-    originalPrice: "$399",
+    price: "From ₹299/night",
+    originalPrice: "₹399",
     image: couplesRetreat,
     icon: Heart,
     features: ["Private hot tub", "Couples massage", "Candlelit dinner", "Stargazing deck"],
@@ -30,8 +30,8 @@ const packages = [
     title: "Family Escape", 
     subtitle: "Adventures for All Ages",
     description: "Create lasting memories with your loved ones",
-    price: "From $399/night",
-    originalPrice: "$499",
+    price: "From ₹399/night",
+    originalPrice: "₹499",
     image: familyEscape,
     icon: Users,
     features: ["Family activities", "Kids play area", "Group meals", "Nature guides"],
@@ -45,8 +45,8 @@ const packages = [
     title: "Solo Explorer",
     subtitle: "Journey Within",
     description: "Find yourself in nature's tranquil embrace",
-    price: "From $199/night", 
-    originalPrice: "$279",
+    price: "From ₹199/night", 
+    originalPrice: "₹279",
     image: soloExplorer,
     icon: User,
     features: ["Meditation space", "Personal guide", "Yoga sessions", "Reading nook"],
@@ -60,8 +60,8 @@ const packages = [
     title: "Group Adventure",
     subtitle: "Bonds & Adventures",
     description: "Unforgettable experiences with your tribe",
-    price: "From $149/person",
-    originalPrice: "$199",
+    price: "From ₹149/person",
+    originalPrice: "₹199",
     image: familyEscape,
     icon: UsersRound,
     features: ["Team activities", "Group fire pit", "Shared dining", "Adventure sports"],
@@ -115,7 +115,7 @@ const EnhancedPackages = () => {
     <section 
       ref={ref}
       id="packages"
-      className="py-24 px-6 bg-gradient-to-br from-secondary/20 via-background to-primary/5 scroll-snap-section"
+      className="relative py-24 px-6 bg-gradient-to-br from-secondary/20 via-background to-primary/5 scroll-snap-section"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div 
@@ -179,7 +179,7 @@ const EnhancedPackages = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredPackages.map((pkg, index) => {
               const IconComponent = pkg.icon;
               return (

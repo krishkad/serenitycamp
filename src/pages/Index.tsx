@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen cursor-nature">
+    <div className="min-h-screen">
       <Navbar />
       <EnhancedHero />
       <EnhancedPackages />

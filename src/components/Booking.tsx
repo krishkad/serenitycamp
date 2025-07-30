@@ -16,12 +16,13 @@ const Booking = () => {
   const [checkOut, setCheckOut] = useState<Date>();
   const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
 
-  const addOns = [
-    { id: "spa", name: "Couples Spa Session", price: "$150" },
-    { id: "photo", name: "Professional Photography", price: "$200" },
-    { id: "wine", name: "Wine Tasting Experience", price: "$75" },
-    { id: "guide", name: "Private Nature Guide", price: "$100" }
-  ];
+const addOns = [
+  { id: "birthday", name: "Birthday Celebration Setup", price: "₹1500" },
+  { id: "anniversary", name: "Wedding Anniversary Decoration", price: "₹2000" },
+  { id: "candlelight", name: "Candlelight Dinner Arrangement", price: "₹750" },
+  { id: "surprise", name: "Surprise Room Decoration", price: "₹1000" }
+];
+
 
   const handleAddOnToggle = (addOnId: string) => {
     setSelectedAddOns(prev => 
@@ -32,7 +33,7 @@ const Booking = () => {
   };
 
   return (
-    <section className="py-20 px-6 bg-background">
+    <section id="booking" className="py-20 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">

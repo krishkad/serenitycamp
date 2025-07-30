@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-luxury-camping.jpg";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -46,9 +45,9 @@ const Hero = () => {
       </div>
       
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <ChevronDown className="text-white w-8 h-8" />
-      </div>
+      </div> */}
     </section>
   );
 };

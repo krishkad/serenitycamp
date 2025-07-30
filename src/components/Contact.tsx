@@ -34,7 +34,7 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-4">
                   123 Serenity Valley Road<br />
                   Pine Ridge, Montana 59718<br />
-                  United States
+                  
                 </p>
                 <div className="bg-muted/50 rounded-[var(--radius)] p-4 aspect-video relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-[var(--shadow-luxury)]">
+          <Card className="bg-card/80 h-max backdrop-blur-sm border-border/50 shadow-[var(--shadow-luxury)]">
             <CardHeader>
               <CardTitle>Send Us a Message</CardTitle>
               <CardDescription>

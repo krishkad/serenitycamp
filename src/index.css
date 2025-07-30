@@ -172,7 +172,7 @@ All colors MUST be HSL.
   .parallax-hero {
     @apply bg-fixed bg-center bg-cover relative;
     background-size: 110%;
-    will-change: transform;
+    /* will-change: transform; */
   }
   
   .glass-morphism {
@@ -201,9 +201,9 @@ All colors MUST be HSL.
   }
   
   /* Custom cursor effects */
-  .cursor-nature {
+  /* .cursor-nature {
     cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23204529' opacity='0.3'/%3E%3C/svg%3E") 12 12, auto;
-  }
+  } */
   
   /* Floating elements */
   .floating-leaves {
